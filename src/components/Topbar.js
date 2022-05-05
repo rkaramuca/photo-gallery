@@ -1,7 +1,7 @@
 const Topbar = () => {
   return (
     <div className="topbar">
-      <h1>PhotoGallery</h1>  
+      <h1>RonGallery</h1>  
     </div>
   );
 }

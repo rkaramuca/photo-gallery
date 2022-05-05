@@ -5,7 +5,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <h1>Your Photos</h1>
+      <h1>Photo Gallery</h1>
       { error && <div>{ error }</div> }
       { isPending && <div>Loading...</div> }
       { quote && <p>{ quote.quote } - { quote.author }</p> }
