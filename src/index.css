@@ -1,11 +1,23 @@
-/* font import */
+/* font imports */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
 /* base styling */
 * {
-  margin: 0;
   font-family: "Quicksand";
   color: #333;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* app styling */
+.App {
+  position: relative;
+  height: 100vh;
 }
 
 /* topbar styling */
@@ -14,23 +26,90 @@
   align-items: center;
   max-width: 800px;
   margin: 0 auto;
-  margin-top: 30px;
+  padding-top: 30px;
+  padding-left: 20px;
 }
 .topbar h1 {
   color: #e8776d;
   font-size: 22px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* header styling */
 .header {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
   max-width: 400px;
   margin: 0 auto;
   margin-top: 30px;
 }
 .header h1 {
-  color: #333;
+  font-family: "Halant";
+  font-size: 68px;
+  font-weight: 300;
+  color: #545454;
+}
+.header p {
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  font-style: italic;
+}
+
+/* gallery styling */
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 790px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-bottom: 3.5rem;
+}
+.gallery img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+/* footer styling */
+.footer {
+  color: white;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 3.5rem;
+}
+
+/* media rules for smaller screens */
+@media(max-width: 375px) {
+  /* topbar styling */
+  .topbar {
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+  }
+  
+  /* header styling */
+  .header {
+    max-width: 300px;
+    margin-top: 10px;
+  }
+  .header h1 {
+    font-size: 60px;
+  }
+  .header p {
+    font-size: 16px;
+  }
+
+  /* gallery styling */
+  .gallery {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
